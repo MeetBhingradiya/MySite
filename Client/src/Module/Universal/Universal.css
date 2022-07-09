@@ -1,0 +1,321 @@
+/* Univarsal Css For My App React.js
+*
+* Univarsal Css Version 1.1
+* Copyright (c) 2022 TEAMSM
+* Licensed under MIT
+*/
+*
+{
+    margin: 0px;
+    font-family: Arial;
+}
+/*  Theme System */
+:root
+{
+    --background-color:#fff;
+    --navigation-color:#fff;
+    --theme-color:#fff;
+}
+.dark
+{
+    --background-color:rgb(0, 0, 0);
+    --navigation-color:rgba(255, 255, 255, 0.11);
+    --theme-color:rgba(255, 255, 255, 0.253);
+    --text-color: rgb(255, 255, 255);
+    --menubar-color:rgba(255, 255, 255, 0.062);
+    --menubar-active-color:rgb(255, 255, 255);
+    --profile-menu-color: rgba(255, 255, 255, 0.226);
+    --menubar-li-hover-color: rgb(0, 102, 255);
+    --menubar-li-hover-color-lite:rgba(110, 168, 255, 0.993);
+    --menubar-menu-icon-active-color: rgb(162, 0, 255);
+    --menubar-logout-icon-hover-color: rgba(255, 255, 255, 0);
+}
+.light
+{
+    --background-color:rgb(255, 255, 255);
+    --navigation-color:rgba(0, 0, 0, 0.11);
+    --theme-color:rgba(0, 0, 0, 0.253);
+    --text-color: rgba(0, 0, 0, 0.699);
+    --menubar-color:rgba(0, 0, 0, 0.062);
+    --menubar-active-color:rgba(0, 0, 0, 0.699);
+    --profile-menu-color: rgba(34, 34, 34, 0.185);
+    --menubar-li-hover-color: rgb(0, 102, 255);
+    --menubar-li-hover-color-lite:rgba(56, 121, 218, 0.993);
+    --menubar-menu-icon-active-color: rgb(162, 0, 255);
+    --menubar-logout-icon-hover-color: rgba(255, 255, 255, 0);
+}
+.ui .theme
+{
+    border-radius: 50%;
+    background-color: var(--theme-color);
+    /* Add Heare Medeia Query TO Make Responsive */
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 10;
+}
+.ui .theme img
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    background-color: var(--background-color);
+}
+/* ! UI PAGE */
+/* ? navigation bar*/
+.ui .navigation
+{
+    position: fixed;
+    top: 25px;
+    bottom: 25px;
+    right: 25px;
+    left: 25px;
+    background-color: var(--navigation-color);
+    border-radius: 20px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/* ? menu bar*/
+.ui .navigation .menubar
+{
+    width: 80px;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    z-index: 1;
+    bottom: 0px;
+    transition: 0.5s;
+}
+.ui .navigation .menubar:hover,.menubar_active
+{
+    display: block;
+    width: 155px;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    z-index: 1;
+    bottom: 0px;
+    transition: 0.5s;
+}
+.ui .navigation .menu_ul
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    bottom: 0px;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2px;
+    color: var(--text-color);
+    background-color: var(--menubar-color);
+    display: block;
+}
+.ui li
+{
+    margin-top: 10px;
+    position: relative;
+    gap: 10px;
+    display: flex;
+    top: 60px;
+    left: 15px;
+    padding: 10px;
+    text-decoration: none;
+}
+.ui .menubar .menu_text
+{
+    opacity: 0;
+}
+.ui .menubar_active .menu_text,.ui .menubar:hover .menu_text
+{
+    opacity: 1;
+}
+.ui .menu_img
+{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    left: 10px;
+    top: 10px;
+}
+.ui .menubar_active .menu_img
+{
+    color: var(--menubar-menu-icon-active-color);
+}
+.ui .navigation .menu_li .active
+{
+    color: var(--menubar-li-hover-color);
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+.ui .navigation .menu_li .notactive
+{
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+.ui .navigation .menu_li .notactive:hover
+{
+    color: var(--menubar-li-hover-color-lite);
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+.ui .menu_icon
+{
+    width: 100%;
+    height: 100%;
+}
+
+.ui .menu_li .menu_logo
+{
+    width: 27px;
+    height: 27px;
+}
+.ui .menu_li .menu_logo svg
+{
+    width: 27px;
+    height: 27px;
+}
+.ui .logout .menu_logo
+{
+    width: 27px;
+    height: 27px;
+}
+.ui .logout .menu_logo svg
+{
+    width: 27px;
+    height: 27px;
+}
+.ui .menu_text
+{
+    position: relative;
+    top: 5px;
+}
+.ui .logout
+{
+    position: absolute;
+    top: calc(100% - 90px);
+}
+.ui .navigation .statusbar
+{
+    position: relative;
+    right: 25px;
+    height: 60px;
+    background-color: var(--navigation-color);
+    left: 0px;
+}
+.ui .navigation .statusbar .profile
+{
+    position: relative;
+    left: calc(100% - 60px);
+    width: 45px;
+    height: 45px;
+    top: 7px;
+    border-radius: 50%;
+} 
+.ui .navigation .statusbar .profile img
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.ui .statusbar .profile_toggle
+{  
+    display: none;
+    opacity: 0;
+}
+.ui .statusbar .profile_toggle_visible
+{  
+    position: fixed;
+    display: flex;
+    opacity: 1;
+    background-color: var(--profile-menu-color);
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+    top: 90px;
+    left: calc(100% - 330px);
+    border-radius: 30px;
+}
+.ui .statusbar .profile_toggle_visible .profile_img_area
+{
+    position: fixed;
+    width: 260px;
+    top: 100px;
+    left: calc(100% - 310px);
+}
+.ui .statusbar .profile_toggle_visible .profile_img
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    align-items: center;
+    left: 80px;
+    top: 20px;
+}
+.ui .statusbar .profile_toggle_visible .profile_img img
+{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.ui .statusbar .profile_toggle_visible .account_name
+{
+    position: fixed;
+    width: 200px;
+    top: 230px;
+    left: calc(100% - 270px);
+    text-overflow: ellipsis;
+    color: var(--text-color);
+    font-size: 20px;
+}
+.ui .statusbar .profile_toggle_visible .profile_ul
+{
+    padding: 5px 5px 5px 5px;
+    position: fixed;
+    width: 280px;
+    height: 175px;
+    top: 300px;
+    left: calc(100% - 320px);
+}
+.ui .statusbar .profile_toggle_visible li
+{
+    margin-top:0px;
+    position: relative;
+    width: 260px;
+    height: 50px;
+    top: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    left: 5px;
+}
+.ui .mbody
+{
+    position: relative;
+    top: 85px;
+    left: 105px;
+    width: calc(100% - 130px);
+    height: calc(100% - 110px);
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 20px;
+}
+@media screen and (max-width : 200px)
+{
+    
+}

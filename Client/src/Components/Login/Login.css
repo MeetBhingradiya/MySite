@@ -1,0 +1,308 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+	font-weight: 40;
+}
+.bodylogin
+{
+	overflow: hidden;
+}
+.section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(-30deg,
+			#9b00e8 0%,
+			#f046ff 50%,
+			#262626 50%,
+			#607d7b 100%);
+	filter: hue-rotate(10deg);
+	animation: animate 10s linear infinite;
+}
+
+.box2 {
+	position: relative;
+	padding: 50px;
+	width: auto;
+	max-width: 400px;
+	height: 534px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+	animation: box 10s linear infinite;
+}
+
+@keyframes box {
+	0% {
+		transform: translateY(10px);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(10px);
+	}
+}
+
+.box2::after {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 5px;
+}
+.box2 .form {
+	position: relative;
+	width: 100%;
+}
+h2 {
+	color: white;
+	font-size:30px ;
+	position: relative;
+	left: 115px;
+}
+/* Inputbox */
+
+.box2 .form .inputbx {
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+::placeholder {
+	color: #fff;
+	opacity: 0.7;
+}
+
+input[type="submit"] {
+	padding: 8px 10px;
+	position: relative;
+	margin: 2px;
+	left: 0px;
+	top: 25px;
+	bottom: 10px;
+	width: 300px;
+	max-width: 300px;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0);
+	border-radius: 6px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:hover {
+	background: rgba(0, 116, 194, 0.644);
+}
+
+span {
+	position: absolute;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	right: 15px;
+	top: 50px;
+}
+
+.fa 
+{
+	font-size: 20px;
+	color: green;
+}
+
+/* Links  */
+.link {
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	padding: 2px;
+}
+
+#link1 {
+	position: relative;
+	top: 35px;
+	left: 5px;
+}
+
+#link2 {
+	position: relative;
+	top: 35px;
+	left: 5px;
+}
+
+.link3 {
+	position: fixed;
+	top: 550px;
+	left: 60px;
+	color: white;
+	text-decoration: none;
+}
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+/*  Messages */
+
+.Message 
+{
+	position: relative;
+	padding: 1rem 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	align-items: center;
+	margin-top: 30px;
+	display: flex;
+	gap: 10px;
+	width: 300px;
+	overflow-x: auto;
+}
+
+
+.info 
+{
+	color: #055160;
+	background-color: #cff4fc;
+	border: none;
+}
+.info-link 
+{
+	color: #04414d;
+	text-decoration: none;
+}
+
+
+.success 
+{
+	color: #0f5132;
+	background-color: #e6fff4ab;
+	border: none;
+}
+
+.success-link 
+{
+	color: #07311e;
+	text-decoration: none;
+}
+
+
+.error 
+{
+	color: #842029;
+	background-color: #e6848ec5;
+	border: none;
+}
+
+.error-link 
+{
+	color: #55090f;
+	text-decoration: none;
+}
+.toggle
+{
+	position: relative;
+	top: -75px;
+	height: 30px;
+	width: 30px;
+}
+.span
+{
+	position: relative;
+	top: -50px;
+}
+.error1
+{
+    display: none;
+	position: fixed;
+	top: 1500px;
+}
+.error2
+{
+	display: none;
+	position: fixed;
+	top: 1500px;
+}
+#email:invalid[focused=true] ~ .error1{
+    display: block;
+    position: absolute;
+	top: 5px;
+	left: 15px;
+	color: rgb(255, 22, 22);
+	font-size: 17px;
+}
+#password:invalid[focused=true] ~ .error2{
+    display: block;
+    position: absolute;
+	top: 12px;
+	left: 15px;
+	color: rgb(255, 22, 22);
+	font-size: 17px;
+}
+input[type=email]:invalid[focused=true],input[type=password]:invalid[focused=true],input[type=text]:invalid[focused=true]
+{
+	border: 2px solid red;
+	box-shadow: inset 0 0 25px rgba(255, 0, 0, 0.2);
+}
+.text
+{
+	position: relative;
+    margin: 5px;
+	margin-top: 0px;
+	left: 0px;
+	top: 25px;
+	bottom: 10px;
+	width: 300px;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: transparent;
+	padding: 8px 10px;
+	border-radius: 6px;
+	padding-left: 45px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+    background-image: url(../Images/user.png);
+	background-repeat: no-repeat;
+	background-size: 10%;
+	background-position-x: 7px;
+	background-position-y: 7px;
+}
+.password
+{
+	position: relative;
+	margin: 5px;
+	margin-top: 10px;
+	left: 0px;
+	top: 25px;
+	bottom: 10px;
+	width: 300px;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: url(../Images/pass2.png);
+	background: transparent;
+	padding: 8px 10px;
+	border-radius: 6px;
+	padding-left: 45px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+	background-repeat: no-repeat;
+	background-size: 10%;
+	background-position-x: 7px;
+	background-position-y: 7px;
+}
+/* {inputs.map((input) => (<FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} /> ))} */

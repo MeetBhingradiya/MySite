@@ -1,0 +1,372 @@
+* 
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(-30deg,
+			#03a9f4 0%,
+			#3a78b7 50%,
+			#262626 50%,
+			#607d7b 100%);
+	filter: hue-rotate(10deg);
+	overflow: auto;
+}
+
+.box {
+	position: relative;
+	padding: 50px;
+	width: auto;
+	min-width: 1050px;
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 6px;
+	box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+.box::after {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 5px;
+}
+.box .form {
+	position: relative;
+	width: 100%;
+}
+.h2 {
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin: 30px;
+	margin-bottom: 30px;
+	position: relative;
+	left: 40%;
+	top: -20px;
+}
+.Message 
+{
+	position: relative;
+	padding: 1rem 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	align-items: center;
+	display: flex;
+	gap: 10px;
+	top:-30px;
+}
+.info 
+{
+	color: #055160;
+	background-color: #cff4fc;
+	border: none;
+}
+.info-link 
+{
+	color: #04414d;
+	text-decoration: none;
+	outline: none;
+}
+.success 
+{
+	color: #0f5132;
+	background-color: #e6fff4ab;
+	border: none;
+}
+.success-link 
+{
+	color: #07311e;
+	text-decoration: none;
+	outline: none;
+}
+.error 
+{
+	color: #842029;
+	background-color: #e6848ec5;
+	border: none;
+}
+.error-link 
+{
+	color: #55090f;
+	text-decoration: none;
+	outline: none;
+}
+
+
+.box .form .inputbx {
+	position: relative;
+	width: 300px;
+	margin-bottom: 20px;
+	top: -50px;
+}
+
+#text
+{
+	position: relative;
+	margin: 2px;
+	left: 0px;
+	top: 25px;
+	bottom: 10px;
+	width: 300px;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: transparent;
+	padding: 8px 10px;
+	border-radius: 6px;
+	padding-left: 45px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+	background-image: url(https://img.icons8.com/external-kmg-design-flat-kmg-design/32/000000/external-user-back-to-school-kmg-design-flat-kmg-design.png);
+	background-repeat: no-repeat;
+	background-size: 10%;
+	background-position-x: 7px;
+	background-position-y: 7px;
+}
+#password
+{
+	position: relative;
+	margin: 2px;
+	left: 0px;
+	top: 25px;
+	bottom: 10px;
+	width: 300px;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: transparent;
+	padding: 8px 10px;
+	border-radius: 6px;
+	padding-left: 45px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+	background-image: url(https://img.icons8.com/nolan/32/touch-id.png);
+	background-repeat: no-repeat;
+	background-size: 10%;
+	background-position-x: 7px;
+	background-position-y: 7px;
+}
+::placeholder {
+	color: #fff;
+	opacity: 0.7;
+}
+
+input[type="submit"] {
+	padding: 8px 10px;
+	position: relative;
+	margin: 2px;
+	left: 0px;
+	top: 25px;
+	bottom: 10px;
+	width: calc(100% + 650px);
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0);
+	border-radius: 6px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:hover {
+	background: rgba(0, 116, 194, 0.644);
+}
+
+input[type=button]
+{
+	padding: 8px 10px;
+	position: relative;
+	margin: 2px;
+	left: -7px;
+	top: -15px;
+	bottom: 10px;
+	width: 300px;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0);
+	border-radius: 6px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+}
+input[type=button]:hover
+{
+	background: rgba(0, 116, 194, 0.644);
+}
+
+span {
+	position: absolute;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	right: 15px;
+	top: 50px;
+}
+
+.fa 
+{
+	font-size: 20px;
+	color: green;
+}
+
+.link {
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	padding: 2px;
+}
+
+#link1 {
+	position: relative;
+	top: 35px;
+	left: 5px;
+}
+
+#link2 {
+	position: relative;
+	top: 35px;
+	left: 5px;
+}
+
+.link3 {
+	position: fixed;
+	top: 550px;
+	left: 95px;
+	text-decoration: none;
+}
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+.box .form .inputbxl2 {
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.file-upload-wrapper{
+	position:relative;
+	top: 270px;
+	left: 325px;
+	width:280px;
+	height:0px;
+	cursor: pointer;
+}
+
+.file-upload-wrapper input{
+	opacity: 0;
+	position:absolute;
+	top: -235px;
+	left: 90px;
+	z-index: 99;
+	height: 200px;
+	margin:0;
+	padding:0;
+	display:block;
+	cursor: pointer;
+	width: 225px;
+	background-color: rgba(255, 0, 0, 0.466);
+	border-radius: 50%;
+}
+.imgview
+{
+	opacity: 1;
+	position: absolute;
+	top: 30px;
+	left: 410px;
+	height: 210px;
+	width: 235px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.356);
+	background-position-x:50%;
+	background-position-y:0%;
+	background-repeat: no-repeat;
+	object-fit: cover;
+}
+.box .form .inputbxl3 {
+	position: relative;
+	width: 300px;
+	margin-bottom: 20px;
+	top: 25px;
+	left: 650px;
+}
+.select
+{
+	margin: 2px;
+	left: 0px;
+	bottom: 10px;
+	width: 200px;
+	height: 50px;
+	outline: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: transparent;
+	padding: 8px 10px;
+	border-radius: 6px;
+	padding-left: 10px;
+	font-size: 16px;
+	font-weight: 300;
+	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+}
+#select1
+{
+	position: absolute;
+	top: -50px;
+	left: 100px;
+}
+#select2
+{
+	position: absolute;
+	top: 20px;
+	left: 100px;
+}
+#select3
+{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+#select4
+{
+	position: absolute;
+	top: 170px;
+	left: 100px;
+}
+span
+{
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 60px;
+	left: 260px;
+}
+.fa
+{
+	font-size: 20px;
+	z-index: 2;
+	color: green;
+}
+.toggle
+{
+	position: relative;
+	top: -5px;
+	width: 30px;
+	height: 30px;
+}
