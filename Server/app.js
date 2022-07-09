@@ -77,7 +77,7 @@ app.use(SESSION({
     resave:false,
     saveUninitialized:false,
     cookie: {
-        expires : 60 * 60 * 24
+        expires : 60 * 60 * 2
     }
 }))
 
@@ -156,7 +156,7 @@ app.post('/Login',(req, res) => {
 app.get('/auth/login/verify',(req,res)=>{
     if(req.session.user)
         {
-            res.send({ loggedIn : true, user : req.session.user});
+            res.send({ Auth : true, user : req.session.user});
         }
     else
         {

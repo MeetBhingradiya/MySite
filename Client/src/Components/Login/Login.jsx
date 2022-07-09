@@ -1,5 +1,5 @@
-import pass from '../Images/pass.png';
-import hidepass from '../Images/hidepass.png';
+import pass from '../../Module/Images/pass.png';
+import hidepass from '../../Module/Images/hidepass.png';
 import React,{useState , useEffect} from 'react';
 import { createRoutesFromChildren, useNavigate } from "react-router-dom";
 import axios from 'axios';
@@ -23,16 +23,16 @@ function Login() {
 
 	useEffect(()=>{
 		axios.get('/auth/login/verify').then((response) =>{
-			if(response.data.loggedIn === true)
+			if(response.data.Auth === true)
 				{
 					toast.success(`Hi, ${response.data.user[0].frist_name} ${response.data.user[0].last_name}`,{
-						autoClose:3000
+						autoClose:2000
 					});
 					console.log(response.data.user[0].frist_name + " " + response.data.user[0].last_name);
-					ChangeMessage(`Hi, ${response.data.user[0].frist_name} ${response.data.user[0].last_name}`);
+					ChangeMessage(`Hi, You Begain Redirected To HomePage`);
 					setInterval(() => {
 						navigate("../Home", { replace: true });
-					}, 4000);
+					}, 2000);
 				}
 		})
 	},[])
@@ -126,7 +126,7 @@ axios.request(reqOptions).then(function (response) {
 		}
 	else if (response.data[0].id)
 		{
-			if(response.data[0].login_permission == 'true')
+			if(response.data[0].login_permission === 'true')
 				{
 					toast.success(`You been Redirected in few moments`);
 					ChangeMessage(`Hi, ${response.data[0].frist_name} ${response.data[0].last_name}`);
@@ -150,7 +150,7 @@ e.preventDefault();
 			position="top-right"
 			autoClose={2000}
 			hideProgressBar={false}
-			newestOnTop={false}
+			newestOnTop={true}
 			closeOnClick
 			rtl={false}
 			draggable

@@ -273,7 +273,7 @@ input[type=email]:invalid[focused=true],input[type=password]:invalid[focused=tru
 	font-size: 16px;
 	font-weight: 300;
 	box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
-    background-image: url(../Images/user.png);
+    background-image: url(../../Module/Images/user.png);
 	background-repeat: no-repeat;
 	background-size: 10%;
 	background-position-x: 7px;
@@ -291,7 +291,7 @@ input[type=email]:invalid[focused=true],input[type=password]:invalid[focused=tru
 	height: 50px;
 	outline: none;
 	border: 1px solid rgba(255, 255, 255, 0.2);
-    background-image: url(../Images/pass2.png);
+    background-image: url(../../Module/Images/pass2.png);
 	background: transparent;
 	padding: 8px 10px;
 	border-radius: 6px;
