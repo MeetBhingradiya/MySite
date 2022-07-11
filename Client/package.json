@@ -10,6 +10,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0-beta1",
     "bootstrap-icons": "^1.8.3",
+    "concurrently": "^7.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -22,7 +23,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=20004 && react-scripts start",
+    "start": "concurrently \"set PORT=20004 && react-scripts start\" \"nodemon ../Server/app.js\"",
+    "both": "concurrently \"set PORT=20004 && react-scripts start\" \"nodemon ../Server/app.js\"",
+    "react": "set PORT=20004 && react-scripts start",
+    "r": "set PORT=20004 && react-scripts start",
+    "node": "nodemon ../Server/app.js",
+    "n": "nodemon ../Server/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
