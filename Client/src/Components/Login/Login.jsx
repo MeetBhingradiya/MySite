@@ -1,7 +1,7 @@
 import pass from '../../Module/Images/pass.png';
 import hidepass from '../../Module/Images/hidepass.png';
 import React,{useState , useEffect} from 'react';
-import { createRoutesFromChildren, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,7 +14,7 @@ function Login() {
 	const [Message,ChangeMessage] = useState('Restricted Login Permissions only');
 	const [password, setpassword] = useState('false');
 	const [email, setemail] = useState('false');
-	const [image, setimage] = useState(pass);
+	const [image, setimage] = useState(pass);																					
 	const [User, setUser] = useState({
 		email:"",password:""
 	});
@@ -71,7 +71,8 @@ function Login() {
 		}
 		else if(error.innerHTML === 'Invalid Email')
 		{
-			
+			error.innerHTML = '* Required';
+			error.style.display= 'block';
 		}
 	}
 	function p(){setpassword('true');}
