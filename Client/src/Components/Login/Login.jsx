@@ -18,24 +18,22 @@ function Login() {
 	const [User, setUser] = useState({
 		email:"",password:""
 	});
-	
-	axios.defaults.withCredentials = true;
-
-	useEffect(()=>{
-		axios.get('/auth/login/verify').then((response) =>{
-			if(response.data.Auth === true)
-				{
-					toast.success(`Hi, ${response.data.user[0].frist_name} ${response.data.user[0].last_name}`,{
-						autoClose:2000
-					});
-					console.log(response.data.user[0].frist_name + " " + response.data.user[0].last_name);
-					ChangeMessage(`Hi, You Begain Redirected To HomePage`);
-					setInterval(() => {
-						navigate("../Home", { replace: true });
-					}, 2000);
-				}
-		})
-	},[])
+	// axios.defaults.withCredentials = true;
+	// useEffect(()=>{
+	// 	axios.get('/auth/login/verify').then((response) =>{
+	// 		if(response.data.Auth === true)
+	// 			{
+	// 				toast.success(`Hi, ${response.data.user[0].frist_name} ${response.data.user[0].last_name}`,{
+	// 					autoClose:2000
+	// 				});
+	// 				console.log(response.data.user[0].frist_name + " " + response.data.user[0].last_name);
+	// 				ChangeMessage(`Hi, You Begain Redirected To HomePage`);
+	// 				setInterval(() => {
+	// 					navigate("../Home", { replace: true });
+	// 				}, 2000);
+	// 			}
+	// 	})
+	// },[])
 
 	// Functions
 	function tpassword()

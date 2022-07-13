@@ -99,6 +99,7 @@ return (
                     <img id="theme_img" src={image} alt="Theme Changer"/> 
                 </div>
             </div>
+            
         </div>
     </div>
     );

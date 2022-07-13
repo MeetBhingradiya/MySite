@@ -1,9 +1,10 @@
 import React from 'react';
+import Cookies from 'js-cookie'
 import { Navigate , Outlet} from "react-router-dom";
 
-function Authenticator(props) {
-
-    if(props.Auth.loggedIn === 'true')
+function Authenticator() {
+    debugger
+    if(Cookies.get('UserData'))
         {
             return <Outlet/>;
         }
@@ -15,4 +16,4 @@ function Authenticator(props) {
     // return isAuth ? <Outlet/> : <Navigate to="/" />
 }
 
-export default Authenticator
+export default Authenticator;
