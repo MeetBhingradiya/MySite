@@ -15,9 +15,9 @@ function Redirect() {
 
 
 
-    async function Verify()
+    const Verify = async () =>
         {
-            const navigate = useNavigate();
+            // const navigate = useNavigate();
             let headersList = {
                 "Accept": "*/*",
                 "Content-Type": "application/json"
@@ -30,16 +30,16 @@ function Redirect() {
                 }
             const Data = await axios.request(reqOptions).then(function (response) {if(response.data.Auth === true)
                 {
-                    const Login = true;
                     // setInterval(() => {
-						navigate("../Home", { replace: true });
+						// navigate("../Home", { replace: true });
 					// }, 3000);
                     SetUserLogin({ isLoggedIn:true });
+                    console.log(Data);
                 }
             else
                 {
-                    const Login = true;
                     SetUserLogin({ isLoggedIn:false });
+                    console.log(Data);
                 }
             })
         }
@@ -52,7 +52,7 @@ function Redirect() {
                 <Route exact path="/" element={<Login />} />
                 <Route exact path="/Login" element={<Login />} />
 
-                        {/* <Route element={<Authenticator Auth={Verify().Login}/>}> */}
+                        <Route element={<Authenticator Auth={Verify}/>}>
                             <Route path="/Home" element={<UI />}/>
                             <Route path="/Dashbord" element={<UI />} />
                             <Route path="/Passbook" element={<UI />} />
@@ -61,7 +61,7 @@ function Redirect() {
                             <Route path="/Database" element={<UI />} />
                             <Route path="/Settings" element={<UI />} />
                             {/* <Route path="/Logout" element={<Logout />} /> */}
-                        {/* </Route> */}
+                        </Route>
                 <Route path="/*" element={<Error />} />
             </Routes>
         </LoginVerify.Provider>
