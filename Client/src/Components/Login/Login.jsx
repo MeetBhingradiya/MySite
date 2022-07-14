@@ -1,11 +1,13 @@
 import pass from '../../Module/Images/pass.png';
 import hidepass from '../../Module/Images/hidepass.png';
-import React,{useState , useEffect} from 'react';
+import React,{useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
+import { LoginVerify } from '../../Redirect/Redirect';
+import { useContext } from 'react';
 function Login() {
 	const navigate = useNavigate();
 	// Title Editor
@@ -18,7 +20,7 @@ function Login() {
 	const [User, setUser] = useState({
 		email:"",password:""
 	});
-	// axios.defaults.withCredentials = true;
+	axios.defaults.withCredentials = true;
 	// useEffect(()=>{
 	// 	axios.get('/auth/login/verify').then((response) =>{
 	// 		if(response.data.Auth === true)
@@ -88,7 +90,7 @@ function Login() {
 						
 					}
 			}
-	const Login = async (e) =>
+	const Login = (e) =>
 		{
 
 let headersList = {
@@ -108,7 +110,7 @@ let reqOptions = {
 	headers: headersList,
 	data: bodyContent,
 }
-
+const Auth = useContext(LoginVerify);
 axios.request(reqOptions).then(function (response) {
 	if(response.data.message)
 		{
@@ -129,6 +131,7 @@ axios.request(reqOptions).then(function (response) {
 				{
 					toast.success(`You been Redirected in few moments`);
 					ChangeMessage(`Hi, ${response.data[0].frist_name} ${response.data[0].last_name}`);
+					Auth.SetUserLogin(true);
 					setInterval(() => {
 						navigate("../Home", { replace: true });
 					}, 3000);

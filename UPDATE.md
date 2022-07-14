@@ -1,4 +1,4 @@
->#  TEAMSM :  Lastest Version 0.8
+># MyWebsite :  Lastest Version 0.8
 >## First Release Update 1 Estimated Before 12/09/2022 5:30 GMT
 >## PreRelease Update 0.9
 >### Security Update : 1 -> Commit Parts 6
@@ -9,6 +9,7 @@
 >+ Client Succsessfully Connected to Server
 >+ Added 404 Error API Server AND Client
 >+ Added Cors Error API Server
+>+ Added context and Redux APIS
 >## PreRelease Update 0.8
 >### Reworked : 1 -> Commit Parts 7
 >+ Languages :  ``` NODE.js MYSQL EXPRESS.js REACT.js ```

@@ -19,7 +19,7 @@ export default function App() {
     return (
         <AuthApi.Provider value={{Auth,setAuth}}>
             <div className='mx2'>
-                <div className='container'>You Viewing TEST MODE</div>
+                <div className='container'>You Viewing TEST MODE [Context API]</div>
                 <MyRoutes Auth={Auth}/>
             </div>
         </AuthApi.Provider>
@@ -56,6 +56,8 @@ const Dashbord = ()=>{
         </div>
     )
 }
+
+
 const MyRoutes = ()=> {
     const Auth = useContext(AuthApi);
     return(

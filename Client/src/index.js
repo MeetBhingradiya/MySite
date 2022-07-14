@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import Redirect from "./Redirect/Redirect";
-import TestMod from './Test/TestMod';
+import Redirect from "./Redirect/Redirect";
+// import TestModC from './Test/TestModContext.test';
+// import TestModR from './Test/TestModRedux.test';
 import { BrowserRouter } from "react-router-dom";
 
 // Redux Store
@@ -13,8 +14,9 @@ root.render(
     <React.StrictMode>
         {/*<Provider store={Store}> */}
             <BrowserRouter>
-                {/* <Redirect/> */}
-                <TestMod />
+                <Redirect/>
+                {/* <TestModC /> */}
+                {/* <TestModR /> */}
             </BrowserRouter>
         {/* </Provider> */}
     </React.StrictMode>
